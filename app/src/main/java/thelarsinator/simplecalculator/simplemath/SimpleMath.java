@@ -42,9 +42,20 @@ public class SimpleMath extends AppCompatActivity {
 
         EditText number1 = (EditText) findViewById(R.id.number1);
         EditText number2 = (EditText) findViewById(R.id.number2);
-        double n1 = Double.parseDouble(number1.getText().toString());
-        double n2 = Double.parseDouble(number2.getText().toString());
+        double n1;
+        double n2;
+        boolean invalidInput = false;
 
+        try
+        {
+            n1 = Double.parseDouble(number1.getText().toString());
+            n2 = Double.parseDouble(number2.getText().toString());
+        }catch (Exception e)
+        {
+            System.out.println("Exception in SimpleMath.java: " + e.getLocalizedMessage());
+            invalidInput = true;
+            n1 = n2 = -1; // Dont set this to zero, because of the division... Lol<
+        }
         double result = 0;
 
         Spinner mySpinner=(Spinner) findViewById(R.id.spinner);
@@ -81,7 +92,7 @@ public class SimpleMath extends AppCompatActivity {
         }
 
         //textView = (TextView) findViewById(R.id.simpleMathResult);
-        if(output != "Invalid")
+        if(output != "Invalid" && !invalidInput)
         {
             textView.setText("Answer: " + Double.toString(result));
         }

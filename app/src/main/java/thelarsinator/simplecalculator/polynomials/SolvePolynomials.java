@@ -27,13 +27,22 @@ public class SolvePolynomials extends AppCompatActivity {
     //The function that is called when the calculate button is pressed
     public void solvePol(View view)
     {
+        boolean invalidInput = false;
         EditText second1 = (EditText) findViewById(R.id.secondOrder);
         EditText first1 = (EditText) findViewById(R.id.firstOrder);
         EditText zero1 = (EditText) findViewById(R.id.zeroOrder);
+        double second, first, zero;
+        try{
+            second = Double.parseDouble(second1.getText().toString());
+            first = Double.parseDouble(first1.getText().toString());
+            zero = Double.parseDouble(zero1.getText().toString());
+        }catch (Exception e)
+        {
+            System.out.println("Exception in SolvePolynomials: " + e.getLocalizedMessage());
+            second = first = zero = -1;
+            invalidInput = true;
+        }
 
-        double second = Double.parseDouble(second1.getText().toString());
-        double first = Double.parseDouble(first1.getText().toString());
-        double zero = Double.parseDouble(zero1.getText().toString());
 
         double x1;
         double x2;
@@ -47,7 +56,6 @@ public class SolvePolynomials extends AppCompatActivity {
         {
             x1 = -zero/first;
             output = "X = " + df.format(x1);
-            textView.setText(output);
         }
         else{
 
@@ -60,7 +68,6 @@ public class SolvePolynomials extends AppCompatActivity {
 
 
                 output = "Answer:\nX\u2081 = " + df.format(x1) + "\nX\u2082 = " + df.format(x2);
-                textView.setText(output);
             }
             else
             {
@@ -68,8 +75,15 @@ public class SolvePolynomials extends AppCompatActivity {
                 x2 = Math.sqrt(-(first * first - 4*second*zero))/(2*second);
                 output ="Answer:\nZ\u2081 = " + df.format(x1) + " + " + df.format(x2) + "i" +
                         "\nZ\u2082 = " + df.format(x1) + " - " + df.format(x2) + "i";
-                textView.setText(output);
             }
+        }
+        if(!invalidInput)
+        {
+            textView.setText(output);
+        }
+        else
+        {
+            textView.setText("Invalid input");
         }
     }
 
