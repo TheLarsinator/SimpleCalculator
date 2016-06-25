@@ -27,20 +27,32 @@ public class SolvePolynomials extends AppCompatActivity {
     //The function that is called when the calculate button is pressed
     public void solvePol(View view)
     {
-        boolean invalidInput = false;
         EditText second1 = (EditText) findViewById(R.id.secondOrder);
         EditText first1 = (EditText) findViewById(R.id.firstOrder);
         EditText zero1 = (EditText) findViewById(R.id.zeroOrder);
         double second, first, zero;
+        //First see if the equation entered is of a second degree...
         try{
             second = Double.parseDouble(second1.getText().toString());
+        }
+        catch(Exception e){
+        //No input could mean that this is 0, and the user want to solve an equation of 1. order
+            second = 0;
+        }
+
+        try{
             first = Double.parseDouble(first1.getText().toString());
+        }
+        catch(Exception e){
+            //No input could mean that this is 0, and the user want to solve an equation of 1. order
+            first = 0;
+        }
+
+        try{
             zero = Double.parseDouble(zero1.getText().toString());
         }catch (Exception e)
         {
-            System.out.println("Exception in SolvePolynomials: " + e.getLocalizedMessage());
-            second = first = zero = -1;
-            invalidInput = true;
+            zero = 0;
         }
 
 
@@ -77,14 +89,7 @@ public class SolvePolynomials extends AppCompatActivity {
                         "\nZ\u2082 = " + df.format(x1) + " - " + df.format(x2) + "i";
             }
         }
-        if(!invalidInput)
-        {
             textView.setText(output);
-        }
-        else
-        {
-            textView.setText("Invalid input");
-        }
     }
 
     //Check if we will get a complex solution
