@@ -133,6 +133,7 @@ public class ComplexMath extends AppCompatActivity {
         spinner.setAdapter(adapter);
     }
 
+    //The function that is called when the calculate button is pressed
     public void solveComplex(View view)
     {
         EditText a1 = (EditText) findViewById(R.id.a1);

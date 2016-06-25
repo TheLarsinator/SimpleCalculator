@@ -34,6 +34,8 @@ public class TimeMath extends AppCompatActivity {
         picker1.setIs24HourView(true);
     }
 
+
+    //The function that is called when the calculate button is pressed
     public void solveTime(View view)
     {
         int h1 = picker1.getCurrentHour();
@@ -46,6 +48,7 @@ public class TimeMath extends AppCompatActivity {
         int newH = 0;
         int newM = 0;
 
+        //Check if the input is on the form HH:MM
         if(str.contains(":"))
         {
             time = str.split(":");
@@ -59,10 +62,5 @@ public class TimeMath extends AppCompatActivity {
         {
             clock.setText("Invalid input");
         }
-
-
-
-
-
     }
 }

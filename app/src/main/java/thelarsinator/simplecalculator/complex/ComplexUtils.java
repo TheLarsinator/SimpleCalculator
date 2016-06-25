@@ -5,6 +5,9 @@ import java.text.DecimalFormat;
 /**
  * Created by Lars on 23.06.2016.
  */
+
+//Class with help functions for math operations on complex numbers, could have added them in the
+    //complex number class instead, but no biggy for now
 public class ComplexUtils
 {
     public static ComplexNumber add(ComplexNumber a, ComplexNumber b)

@@ -24,6 +24,7 @@ public class SolvePolynomials extends AppCompatActivity {
         textView.setText("Answer:\n");
     }
 
+    //The function that is called when the calculate button is pressed
     public void solvePol(View view)
     {
         EditText second1 = (EditText) findViewById(R.id.secondOrder);

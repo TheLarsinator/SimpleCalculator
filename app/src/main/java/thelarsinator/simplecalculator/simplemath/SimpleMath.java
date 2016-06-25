@@ -36,6 +36,8 @@ public class SimpleMath extends AppCompatActivity {
         textView.setText("Answer: ");
     }
 
+
+    //The function that is called when the calculate button is pressed
     public void calculate(View view){
 
         EditText number1 = (EditText) findViewById(R.id.number1);

@@ -3,6 +3,8 @@ package thelarsinator.simplecalculator.complex;
 /**
  * Created by Lars on 23.06.2016.
  */
+
+//Class to represent complex numbers more easily
 public class ComplexNumber
 {
     private double a;

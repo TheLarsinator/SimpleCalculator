@@ -62,7 +62,7 @@ public class AngleMath extends AppCompatActivity {
         }
     }
 
-
+    //The function that is called when the calculate button is pressed
     public void doTrig(View view)
     {
         //Format doubles
