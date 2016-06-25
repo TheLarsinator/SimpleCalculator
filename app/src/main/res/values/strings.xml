@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Simple Calculator</string>
+    <string name="button_1">Arithmetic Calculations</string>
+    <string name="button_2">Polynomials</string>
+    <string name="button_3">Trigonometry</string>
+    <string name="button_4">Complex Calculations</string>
+    <string name="button_5">Time</string>
+
+    <string name="button_calculate">Calculate</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>
