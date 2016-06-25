@@ -44,7 +44,7 @@ public class SolvePolynomials extends AppCompatActivity {
             first = Double.parseDouble(first1.getText().toString());
         }
         catch(Exception e){
-            //No input could mean that this is 0, and the user want to solve an equation of 1. order
+            //No input could mean that this is 0
             first = 0;
         }
 

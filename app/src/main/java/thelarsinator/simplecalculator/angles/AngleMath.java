@@ -70,7 +70,16 @@ public class AngleMath extends AppCompatActivity {
 
         EditText angle = (EditText) findViewById(R.id.angle);
         String a = angle.getText().toString();
-        double ang = Double.parseDouble(a);
+        double ang;
+
+        try
+        {
+            ang = Double.parseDouble(a);
+        }catch (Exception e)
+        {
+            ang = 0;
+        }
+
         double result = 0;
         TextView sinusField = (TextView) findViewById(R.id.sinus);
         TextView sinusResult = (TextView) findViewById(R.id.sinusResult);
