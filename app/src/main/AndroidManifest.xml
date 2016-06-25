@@ -19,7 +19,7 @@
         <activity android:name=".polynomials.SolvePolynomials" />
         <activity android:name=".angles.AngleMath" />
         <activity android:name=".complex.ComplexMath" />
-        <activity android:name=".time.TimeMath"></activity>
+        <activity android:name=".time.TimeMath" />
     </application>
 
 </manifest>
