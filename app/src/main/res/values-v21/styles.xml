@@ -5,5 +5,18 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:textColorPrimaryInverse">@color/secondary_text_disabled_material_dark
+        </item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/switch_thumb_disabled_material_dark</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:colorBackground">@color/material_grey_50</item>
+        <item name="android:navigationBarColor">@android:color/primary_text_light</item>
     </style>
 </resources>

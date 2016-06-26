@@ -6,14 +6,17 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/abc_input_method_navigation_guard</item>
+        <item name="android:textColorPrimary">@color/switch_thumb_disabled_material_dark</item>
         <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:colorBackground">@color/material_grey_50</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:textColorPrimaryInverse">@color/secondary_text_disabled_material_dark
+        </item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
