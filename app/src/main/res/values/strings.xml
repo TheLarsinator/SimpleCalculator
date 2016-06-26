@@ -9,8 +9,8 @@
     <string name="button_calculate">Calculate</string>
     <string name="title_activity_main2">Main2Activity</string>
 
-    <string name="version">V-1.0</string>
-    <string name="rdate">25.06.16</string>
+    <string name="version">V-1.1</string>
+    <string name="rdate">26.06.16</string>
     <string name="title_activity_nav_menu">navMenu</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
