@@ -5,12 +5,12 @@
     <!-- Settings, should always be in the overflow -->
     <item android:id="@+id/action_simplemath"
         android:title="@string/button_1"
-        android:icon="@drawable/simpleIcon"
+        android:icon="@drawable/simpleicon"
         app:showAsAction="never"/>
 
     <item android:id="@+id/action_complexmath"
         android:title="@string/button_4"
-        android:icon="@drawable/complexIcon"
+        android:icon="@drawable/complexicon"
         app:showAsAction="never"/>
 
     <item android:id="@+id/action_solvepoly"
@@ -20,12 +20,12 @@
 
     <item android:id="@+id/action_anglemath"
         android:title="@string/button_3"
-        android:icon="@drawable/angleIcon"
+        android:icon="@drawable/angleicon"
         app:showAsAction="never"/>
 
     <item android:id="@+id/action_timemath"
         android:title="@string/button_5"
-        android:icon="@drawable/timeIcon"
+        android:icon="@drawable/timeicon"
         app:showAsAction="never"/>
 
 
