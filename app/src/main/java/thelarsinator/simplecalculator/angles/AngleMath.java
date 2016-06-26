@@ -1,8 +1,11 @@
 package thelarsinator.simplecalculator.angles;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -13,6 +16,10 @@ import android.widget.ToggleButton;
 import java.text.DecimalFormat;
 
 import thelarsinator.simplecalculator.R;
+import thelarsinator.simplecalculator.complex.ComplexMath;
+import thelarsinator.simplecalculator.polynomials.SolvePolynomials;
+import thelarsinator.simplecalculator.simplemath.SimpleMath;
+import thelarsinator.simplecalculator.time.TimeMath;
 
 public class AngleMath extends AppCompatActivity {
 
@@ -60,8 +67,52 @@ public class AngleMath extends AppCompatActivity {
             switchStatus.setText("Using degrees");
             useRads = false;
         }
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_layout, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_simplemath: {
+                Intent intent = new Intent(this, SimpleMath.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.action_solvepoly: {
+                Intent intent = new Intent(this, SolvePolynomials.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.action_anglemath: {
+                Intent intent = new Intent(this, AngleMath.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.action_complexmath: {
+                Intent intent = new Intent(this, ComplexMath.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.action_timemath: {
+                Intent intent = new Intent(this, TimeMath.class);
+                startActivity(intent);
+                return true;
+            }
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
     //The function that is called when the calculate button is pressed
     public void doTrig(View view)
     {

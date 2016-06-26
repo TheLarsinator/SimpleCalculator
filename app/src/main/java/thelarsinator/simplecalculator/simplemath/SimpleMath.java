@@ -3,6 +3,9 @@ package thelarsinator.simplecalculator.simplemath;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -10,6 +13,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import thelarsinator.simplecalculator.R;
+import thelarsinator.simplecalculator.angles.AngleMath;
+import thelarsinator.simplecalculator.complex.ComplexMath;
+import thelarsinator.simplecalculator.polynomials.SolvePolynomials;
+import thelarsinator.simplecalculator.time.TimeMath;
 
 public class SimpleMath extends AppCompatActivity {
 
@@ -34,6 +41,52 @@ public class SimpleMath extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.simpleMathResult);
         textView.setTextSize(25);
         textView.setText("Answer: ");
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_layout, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_simplemath: {
+                Intent intent = new Intent(this, SimpleMath.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.action_solvepoly: {
+                Intent intent = new Intent(this, SolvePolynomials.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.action_anglemath: {
+                Intent intent = new Intent(this, AngleMath.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.action_complexmath: {
+                Intent intent = new Intent(this, ComplexMath.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.action_timemath: {
+                Intent intent = new Intent(this, TimeMath.class);
+                startActivity(intent);
+                return true;
+            }
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 
 

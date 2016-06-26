@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="@string/menu_button1"
+        app:showAsAction="ifRoom"/>
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_simplemath"
+        android:title="@string/button_1"
+        android:icon="@drawable/ic_menu_manage"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_complexmath"
+        android:title="@string/button_4"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_solvepoly"
+        android:title="@string/button_2"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_anglemath"
+        android:title="@string/button_3"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_timemath"
+        android:title="@string/button_5"
+        app:showAsAction="never"/>
+
+
+</menu>
